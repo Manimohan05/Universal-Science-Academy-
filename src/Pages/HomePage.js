@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 import kuganSir from "../image/kugansir.png";
 import chemistrtsir from "../image/chemistry sir.jpg";
 import banner2 from "../image/Blue and Yellow Illustrated Digital Marketing Video (5).jpg";
-import banner3 from "../image/bannernew3.jpg";
+import video from "../image/video.mp4";
 import timetable2 from "../image/time table.jpg";
 import timetable1 from "../image/phytimetable.jpg";
-import backgroundImage from "../image/back.png"; // Add your background image
-import banner1 from "../image/bannernew.jpg"; // Add your banner image
-import banner5 from "../image/bannernew1.jpg"; // Add your banner image
+import backgroundImage from "../image/back.png";
+import banner1 from "../image/bannernew.jpg";
+import banner5 from "../image/bannernew1.jpg";
 
 const HomePage = () => {
   return (
@@ -26,28 +26,22 @@ const HomePage = () => {
 
       {/* Content */}
       <div className="relative">
-        {/* Carousel Section */}
-        <section className="w-full mt-4 h-[100vh] flex items-center justify-center relative">
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            className="w-full h-full"
-          >
-            {[{ img: banner3, text: "Learn, Grow & Succeed" }, { img: banner5, text: "Join Us for a Brighter Future" },{img:banner2},{img:banner1}].map(
-              (slide, index) => (
-                <SwiperSlide key={index} className="flex items-center justify-center">
-                  <img
-                    src={index === 0 ? banner1 : slide.img}  // First slide uses a different image for mobile
-                    alt={`Tuition Banner ${index + 1}`}
-                    className="flex space-x-4 w-max"
-                  />
-                </SwiperSlide>
-              )
-            )}
-          </Swiper>
-        </section>
+      <section className="w-full mt-4 h-[25vh] md:h-[100vh] flex items-center justify-center relative">
+  <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    navigation
+    pagination={{ clickable: true }}
+    autoplay={{ delay: 5000, disableOnInteraction: false }}
+    className="w-full h-full"
+  >
+    <SwiperSlide className="flex items-center justify-center">
+      <video className="w-full h-full object-cover rounded-lg" autoPlay loop muted playsInline>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </SwiperSlide>
+  </Swiper>
+</section>
 
         <section className="py-8 text-center w-full flex flex-col items-center">
           <h2 className="text-4xl md:text-6xl font-extrabold animate-pulse uppercase">Admissions Open!</h2>
@@ -94,22 +88,19 @@ const HomePage = () => {
           </Link>
         </section>
 
-        {/* Continuous Banner Section */}
-        <section className="w-full py-8">
-          <div className="overflow-hidden w-full relative mt-6">
-            <div className="flex space-x-4 animate-marquee w-max">
-              {[banner1, banner2, banner5, banner1, banner2, banner5].map((img, index) => (
-                <div key={index} className="flex-shrink-0 px-4">
-                  <img
-                    src={img}
-                    alt={`Banner Slide ${index + 1}`}
-                    className="h-40 w-auto object-cover rounded-lg shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <section className="w-full py-8 overflow-hidden relative">
+  <div className="flex w-max animate-marquee">
+    {[banner1, banner2, banner5, banner1, banner2, banner5].map((img, index) => (
+      <div key={index} className="flex-shrink-0 px-4">
+        <img
+          src={img}
+          alt={`Banner Slide ${index + 1}`}
+          className="h-40 w-auto object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    ))}
+  </div>
+</section>
 
         <section className="py-8 text-center w-full">
           <h2 className="text-4xl font-bold">Our Location</h2>

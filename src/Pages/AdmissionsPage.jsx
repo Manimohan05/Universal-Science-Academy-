@@ -38,14 +38,8 @@ const AdmissionsPage = () => {
     setIsSubmitting(true);
 
     const emailParams = {
-      fullName: formData.fullName,
-      batch: formData.batch,
-      stream: formData.stream,
-      medium: formData.medium,
+      ...formData,
       subjects: formData.subjects.join(", "),
-      address: formData.address,
-      nic: formData.nic,
-      mobile: formData.mobile,
       email: formData.email || "N/A",
       remarks: formData.remarks || "N/A",
     };
@@ -84,37 +78,37 @@ const AdmissionsPage = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6">
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
       ></div>
 
-      {/* Admission Form */}
       <div className="relative bg-white p-10 rounded-xl shadow-2xl max-w-lg w-full">
         <h1 className="text-3xl font-bold text-center mb-6 text-[#002E63]">
           Admission Form
         </h1>
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Text Inputs */}
-          {["fullName", "address", "nic", "mobile", "email"].map((name) => (
+          {[
+            { name: "fullName", label: "Full Name" },
+            { name: "address", label: "Address" },
+            { name: "nic", label: "NIC" },
+            { name: "mobile", label: "Mobile" },
+            { name: "email", label: "Email", type: "email" },
+          ].map(({ name, label, type = "text" }) => (
             <div key={name}>
-              <label className="block font-medium mb-1">
-                {name.replace(/([A-Z])/g, " $1").trim()}:
-              </label>
+              <label className="block font-medium mb-1">{label}:</label>
               <input
-                type={name === "email" ? "email" : "text"}
+                type={type}
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
-                placeholder={`Enter your ${name}`}
+                placeholder={`Enter your ${label.toLowerCase()}`}
                 className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#002E63]"
                 required={name !== "email"}
               />
             </div>
           ))}
 
-          {/* Select Inputs */}
           {["batch", "stream", "medium"].map((name) => (
             <div key={name}>
               <label className="block font-medium mb-1">
@@ -128,23 +122,21 @@ const AdmissionsPage = () => {
                 required
               >
                 <option value="" disabled>Select {name}</option>
-                {[
-                  name === "batch" && ["2025 A/L", "2026 A/L", "2027 A/L", "Day Batch"],
-                  name === "stream" && ["Bio", "Maths"],
-                  name === "medium" && ["English", "Tamil"],
-                ]
-                  .filter(Boolean)
-                  .flat()
-                  .map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
+                {(
+                  name === "batch"
+                    ? ["2025 A/L", "2026 A/L", "2027 A/L", "Day Batch"]
+                    : name === "stream"
+                    ? ["Bio", "Maths"]
+                    : ["English", "Tamil"]
+                ).map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
               </select>
             </div>
           ))}
 
-          {/* Subjects */}
           <div>
             <label className="block font-medium mb-2">Subjects:</label>
             <div className="flex flex-wrap gap-4">
@@ -163,7 +155,6 @@ const AdmissionsPage = () => {
             </div>
           </div>
 
-          {/* Remarks */}
           <div>
             <label className="block font-medium mb-1">Remarks (Optional):</label>
             <textarea
@@ -175,7 +166,6 @@ const AdmissionsPage = () => {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-[#002E63] text-white py-3 rounded-lg text-lg font-semibold hover:bg-[#001C3D] transition duration-300"

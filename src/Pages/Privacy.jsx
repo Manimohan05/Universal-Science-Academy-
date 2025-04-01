@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
         <li>You can opt out of promotional communications at any time.</li>
       </ul>
       <p>To exercise these rights, contact us at <a href="mailto:universalscienceacademyjaffna@gmail.com" className="underline hover:text-pink-400">
-                universalscienceacademy@gmail.com
+      universalscienceacademyjaffna@gmail.com
               </a>.</p>
 
       <h3 className="text-lg font-semibold mt-6">6. Changes to This Privacy Policy</h3>
@@ -56,10 +56,10 @@ const PrivacyPolicy = () => {
       <p><strong>Universal Science Academy</strong></p>
       <p>K.K.S Road Chunnakam</p>
       <p>Email: <a href="mailto:universalscienceacademyjaffna@gmail.com" className="underline hover:text-pink-400">
-                universalscienceacademy@gmail.com
+      universalscienceacademyjaffna@gmail.com
               </a></p>
       <p>Phone: <a href="tel:0779966888" className="underline hover:text-pink-400">
-                0778899556
+      0779966888
               </a></p>
 
       <p className="mt-6">By using our services, you agree to the terms of this Privacy Policy.</p>

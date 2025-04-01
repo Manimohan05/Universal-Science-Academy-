@@ -84,7 +84,7 @@ const ContactPage = () => {
                     href="mailto:universalscienceacademyjaffna@gmail.com"
                     className="underline hover:text-pink-400"
                   >
-                    universalscienceacademy@gmail.com
+                    universalscienceacademyjaffna@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center space-x-2">

@@ -42,8 +42,8 @@ const Navbar = () => {
           <Link to="/" className="py-2 border-b border-gray-600" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/class" className="py-2 border-b border-gray-600" onClick={() => setIsOpen(false)}>Time Table</Link>
           <Link to="/admissions" className="py-2 border-b border-gray-600" onClick={() => setIsOpen(false)}>Admissions</Link>
-          <Link to="/about" className="py-2 border-b border-gray-600" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/contact" className="py-2" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link to="/about" className="py-2 border-b border-gray-600" onClick={() => setIsOpen(false)}>About Us</Link>
+          <Link to="/contact" className="py-2" onClick={() => setIsOpen(false)}>Contact Us</Link>
           
         </div>
       )}

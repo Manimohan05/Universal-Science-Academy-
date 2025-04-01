@@ -14,6 +14,7 @@ import timetable1 from "../image/phytimetable.jpg";
 import backgroundImage from "../image/back.png";
 import banner1 from "../image/bannernew.jpg";
 import banner5 from "../image/bannernew1.jpg";
+import timetable from "../image/timetable.png"
 
 const HomePage = () => {
   return (
@@ -54,21 +55,24 @@ const HomePage = () => {
           </Link>
         </section>
 
-        {/* Teachers Details Section */}
-        <section className="py-8 text-center max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Our Teachers</h2>
-          <div className="flex flex-wrap justify-center gap-5 mt-2">
-            {[{ name: "M.Kugan", degree: "BSc (Hons), Dip in Edu", img: kuganSir }, { name: "T.Sharangan", degree: "BSc - R", img: chemistrtsir }].map(
-              (teacher, index) => (
-                <div key={index} className="w-100 bg-white shadow-lg rounded-lg text-black p-4">
-                  <img src={teacher.img} alt={teacher.name} className="w-full h-48 object-cover rounded-lg" />
-                  <h3 className="text-xl font-bold mt-2">{teacher.name}</h3>
-                  <p className="text-sm">{teacher.degree}</p>
-                </div>
-              )
-            )}
-          </div>
-        </section>
+      {/* Teachers Details Section */}
+<section className="py-8 text-center max-w-5xl mx-auto">
+  <h2 className="text-4xl font-bold mb-6">Our Teachers</h2>
+  <div className="flex flex-wrap justify-center gap-5 mt-2">
+    {[
+      { name: "M.Kugan", degree: "BSc (Hons), Dip in Edu", img: kuganSir, subject: "Physics Sir" },
+      { name: "T.Sharangan", degree: "BSc - R", img: chemistrtsir, subject: "Chemistry Sir" }
+    ].map((teacher, index) => (
+      <div key={index} className="w-100 bg-white shadow-lg rounded-lg text-black p-4">
+        <h3 className="text-lg font-semibold mb-2">{teacher.subject}</h3>
+        <img src={teacher.img} alt={teacher.name} className="w-full h-48 object-cover rounded-lg" />
+        <h3 className="text-xl font-bold mt-2">{teacher.name}</h3>
+        <p className="text-sm">{teacher.degree}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
 
         {/* Classes Section */}
         <section className="py-8 text-center max-w-6xl mx-auto">
@@ -90,7 +94,7 @@ const HomePage = () => {
 
         <section className="w-full py-8 overflow-hidden relative">
   <div className="flex w-max animate-marquee">
-    {[banner1, banner2, banner5, banner1, banner2, banner5].map((img, index) => (
+    {[banner1, banner2, banner5, banner1, banner2, banner5,timetable].map((img, index) => (
       <div key={index} className="flex-shrink-0 px-4">
         <img
           src={img}
@@ -102,19 +106,27 @@ const HomePage = () => {
   </div>
 </section>
 
-        <section className="py-8 text-center w-full">
-          <h2 className="text-4xl font-bold">Our Location</h2>
-          <div className="w-full mt-4 flex justify-center">
-            <iframe
-              className="w-full max-w-4xl h-[600px] rounded-lg shadow-lg"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=K.K.S%20Road,%20Chunnakam+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </section>
+<section className="py-8 text-center w-full">
+  <h2 className="text-4xl font-bold">Our Location</h2>
+  <div className="relative text-right w-[600px] h-[400px] mx-auto">
+    <div className="overflow-hidden bg-none w-full h-full">
+      <iframe
+        className="w-full h-full"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight="0"
+        marginWidth="0"
+        src="https://maps.google.com/maps?width=600&height=400&hl=en&q=LAUGFS%20ECO%20SRI%20-%20Chunnakam%20Vehicle%20Emission%20Testing%20Center&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
       </div>
     </div>
   );
 };
+
 
 export default HomePage;

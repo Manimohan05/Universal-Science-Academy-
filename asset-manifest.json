@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fa0aede3.css",
+    "main.js": "/static/js/main.b8f11a77.js",
+    "static/js/453.472070cc.chunk.js": "/static/js/453.472070cc.chunk.js",
+    "static/media/video.mp4": "/static/media/video.d896808506c620e24cb4.mp4",
+    "static/media/back.png": "/static/media/back.83d917a532c7b44a8ab9.png",
+    "static/media/phytimetable.jpg": "/static/media/phytimetable.a3fd952863436789f696.jpg",
+    "static/media/logo-whatsapp-png-46041.png": "/static/media/logo-whatsapp-png-46041.f8fda3382185a5abf7c0.png",
+    "static/media/timetable.png": "/static/media/timetable.2e9537a503ed5da71d47.png",
+    "static/media/bannernew.jpg": "/static/media/bannernew.49a9d0e59711ba4525e5.jpg",
+    "static/media/Blue and Yellow Illustrated Digital Marketing Video (5).jpg": "/static/media/Blue and Yellow Illustrated Digital Marketing Video (5).0bd9cc38683df1ef6b1b.jpg",
+    "static/media/USA_transparent (2).png": "/static/media/USA_transparent (2).8f9941ae33aeb3352899.png",
+    "static/media/bannernew1.jpg": "/static/media/bannernew1.f4c1cd595c1794c95412.jpg",
+    "static/media/kugansir.png": "/static/media/kugansir.8542c186552ec19de007.png",
+    "static/media/ph9.jpg": "/static/media/ph9.0107cd44d5b1f902840d.jpg",
+    "static/media/ph7.jpg": "/static/media/ph7.d9c66a5929dd3176cefe.jpg",
+    "static/media/ph23.jpg": "/static/media/ph23.041231d9a9914bab0283.jpg",
+    "static/media/ph8.jpg": "/static/media/ph8.6e44b3d2063169bd2209.jpg",
+    "static/media/ph2.jpg": "/static/media/ph2.9f87c6a68f80e646327f.jpg",
+    "static/media/ph77.jpg": "/static/media/ph77.ec52c0094e6b50b09dad.jpg",
+    "static/media/time table.jpg": "/static/media/time table.5d912d2238ba2c112206.jpg",
+    "static/media/chemistry sir.jpg": "/static/media/chemistry sir.832d37d5c5a24f4bbe9e.jpg",
+    "index.html": "/index.html",
+    "main.fa0aede3.css.map": "/static/css/main.fa0aede3.css.map",
+    "main.b8f11a77.js.map": "/static/js/main.b8f11a77.js.map",
+    "453.472070cc.chunk.js.map": "/static/js/453.472070cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa0aede3.css",
+    "static/js/main.b8f11a77.js"
+  ]
+}

@@ -50,11 +50,12 @@ const ContactPage = () => {
     <div className="relative min-h-screen flex items-center justify-center">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-      </div>
+        className="bg-fixed absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url(${background})` ,backgroundSize: "contain", // Adjusts size to fit within the screen
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        width: "100%",opacity:0.1}}
+      ></div>
 
       {/* Content Section */}
       <div className="relative flex items-center justify-center min-h-screen p-6 w-full max-w-4xl">

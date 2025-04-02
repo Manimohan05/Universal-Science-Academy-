@@ -78,9 +78,12 @@ const AdmissionsPage = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
+       <div
+        className="bg-fixed absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url(${background})` ,backgroundSize: "contain", // Adjusts size to fit within the screen
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        width: "100%",opacity:0.1}}
       ></div>
 
       <div className="relative bg-white p-10 rounded-xl shadow-2xl max-w-lg w-full">

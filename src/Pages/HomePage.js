@@ -21,10 +21,12 @@ const HomePage = () => {
     <div className="relative bg-secondary text-primary px-6 md:px-12 lg:px-20 xl:px-32">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url(${backgroundImage})`, opacity: 0.1 }}
+        className="bg-fixed absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url(${backgroundImage})` ,backgroundSize: "contain", // Adjusts size to fit within the screen
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        width: "100%",opacity:0.1}}
       ></div>
-
       {/* Content */}
       <div className="relative">
       <section className="w-full mt-4 h-[25vh] md:h-[100vh] flex items-center justify-center relative">
@@ -107,21 +109,18 @@ const HomePage = () => {
 </section>
 
 <section className="py-8 text-center w-full">
-  <h2 className="text-4xl font-bold">Our Location</h2>
-  <div className="relative text-right w-[600px] h-[400px] mx-auto">
-    <div className="overflow-hidden bg-none w-full h-full">
-      <iframe
-        className="w-full h-full"
-        frameBorder="0"
-        scrolling="no"
-        marginHeight="0"
-        marginWidth="0"
-        src="https://maps.google.com/maps?width=600&height=400&hl=en&q=LAUGFS%20ECO%20SRI%20-%20Chunnakam%20Vehicle%20Emission%20Testing%20Center&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-        allowFullScreen
-      ></iframe>
-    </div>
+  <h2 className="text-4xl font-bold mb-4">Our Location</h2>
+  <div className="relative w-full max-w-[600px] h-64 md:h-[400px] mx-auto">
+    <iframe
+      className="w-full h-full"
+      src="https://maps.google.com/maps?q=P2XH+PR%20Chunnakam%20LAUGFS%20ECO%20SRI%20-%20Chunnakam%20Vehicle%20Emission%20Testing%20Center&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+      frameBorder="0"
+      scrolling="no"
+      allowFullScreen
+    ></iframe>
   </div>
 </section>
+
 
       </div>
     </div>

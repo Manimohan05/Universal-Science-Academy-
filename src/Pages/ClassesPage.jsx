@@ -6,8 +6,11 @@ const ClassesPage = () => {
     <div className="relative min-h-screen flex items-center justify-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-10"
-        style={{ backgroundImage: `url(${background})` }}
+        className="bg-fixed absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: `url(${background})` ,backgroundSize: "contain", // Adjusts size to fit within the screen
+        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        width: "100%",opacity:0.1}}
       ></div>
 
       {/* Dark Overlay for Opacity Effect */}
@@ -73,7 +76,7 @@ const ClassesPage = () => {
           </div>
 
           <div className="mt-4 bg-white bg-opacity-10 backdrop-blur-md shadow-lg p-6 rounded-lg">
-            <h3 className="text-xl font-semibold">G.C.E A/L 2026 Batch</h3>
+            <h3 className="text-xl font-semibold">G.C.E A/L 2027 Batch</h3>
             <ul className="list-disc list-inside">
               <li>Monday: 5.30 p.m. - 6.30 p.m.</li>
               <li>Wednesday: 5.30 p.m. - 6.30 p.m.</li>

@@ -37,10 +37,10 @@ const ClassesPage = () => {
           <div className="mt-4 bg-white bg-opacity-10 backdrop-blur-md shadow-lg p-6 rounded-lg">
             <h3 className="text-xl font-semibold">G.C.E A/L 2026 Batch</h3>
             <ul className="list-disc list-inside">
-              <li>Monday: 7.00 p.m. - 8.30 p.m.</li>
-              <li>Tuesday: 7.00 p.m. - 8.30 p.m.</li>
-              <li>Wednesday: 7.00 p.m. - 8.30 p.m.</li>
-              <li>Thursday: 7.00 p.m. - 8.30 p.m.</li>
+              <li>Monday: 6.00 p.m. - 7.30 p.m.</li>
+              <li>Tuesday: 6.00 p.m. - 7.30 p.m.</li>
+              <li>Wednesday: 6.00 p.m. - 7.30 p.m.</li>
+              <li>Thursday: 5.45 p.m. - 7.00 p.m.</li>
             </ul>
           </div>
           <div className="mt-4 bg-white bg-opacity-10 backdrop-blur-md shadow-lg p-6 rounded-lg">
@@ -78,8 +78,8 @@ const ClassesPage = () => {
           <div className="mt-4 bg-white bg-opacity-10 backdrop-blur-md shadow-lg p-6 rounded-lg">
             <h3 className="text-xl font-semibold">G.C.E A/L 2027 Batch</h3>
             <ul className="list-disc list-inside">
-              <li>Monday: 5.30 p.m. - 6.30 p.m.</li>
-              <li>Wednesday: 5.30 p.m. - 6.30 p.m.</li>
+              <li>Monday: 5.00 p.m. - 6.30 p.m.</li>
+              <li>Wednesday: 5.00 p.m. - 6.30 p.m.</li>
             </ul>
           </div>
         </section>

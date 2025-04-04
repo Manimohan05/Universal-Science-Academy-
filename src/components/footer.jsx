@@ -9,7 +9,7 @@ const Footer = () => {
         <Link to="/contact" className="hover:underline">Contact Us</Link>
         <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
       </div>
-      <p className="mt-4">© 2024 Universal Science Academy. All rights reserved.</p>
+      <p className="mt-4">©Universal Science Academy Jaffna. All rights reserved.</p>
       
     </footer>
   );

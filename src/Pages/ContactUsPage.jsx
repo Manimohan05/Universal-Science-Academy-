@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import background from "../image/back.png";
 import logo from "../image/USA_transparent (2).png";
 import contactImage from "../image/ph8.jpg";
+import { Facebook } from "lucide-react";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -79,6 +80,12 @@ const ContactPage = () => {
                 Let's discuss something <span className="text-pink-400">exciting</span> together!
               </h2>
               <div className="mt-4 space-y-2">
+              <p className="flex items-center space-x-2">
+                  <Facebook className="w-5 h-5 text-blue-600" />
+                  <a href="https://www.facebook.com/share/18szF5de1G/" target="_blank" rel="noopener noreferrer" className="underline hover:text-pink-400">
+                  Universal Science Academy
+                  </a>
+                </p>
                 <p className="flex items-center space-x-2">
                   <span>📧</span>
                   <a
